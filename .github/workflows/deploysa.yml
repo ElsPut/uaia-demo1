@@ -33,6 +33,6 @@ jobs:
       - name: deploy storage
         uses: azure/arm-deploy@v1
         with:
-         deploymentName: ${{github-run_Number}}
+         deploymentName: ${{github.run_Number}}
          resourceGroupName: ${{env.AZ_RG_NAME}}
          template: ./sa.bicep
