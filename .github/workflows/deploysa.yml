@@ -9,12 +9,15 @@ on:
 env:
  AZ_RG_NAME: RG6
  AZ_RG_LOCATION: WestEurope
+ 
+permissions:
+ id-token: write
+ contents: read
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   deploy:
-    environment: production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
